@@ -1,0 +1,84 @@
+------- Checking Command -----------------------------------------------------
+ls -al ~/.ssh
+-------------------------------------------------------------------------------
+
+If .pub key file show after command like below example that means exist .ssh key, now we can use exist .ssh key.
+=========== Result EXAMPLE ==========
+    id_rsa.pub
+    id_ecdsa.pub
+    id_ed25519.pub
+	#--- or etc -----
+=====================================
+
+
+# Generate New SSH
+----------- Generating Command ---------------------------------------------------
+ssh-keygen
+-----------------------------------------------------------------------------------
+
+=========== Result EXAMPLE ===========================
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa):
+Created directory '/c/Users/Administrator/.ssh'.    #---- Enter (NOTED) -------
+Enter passphrase (empty for no passphrase): #------ Enter or any passphrase then Enter ---------
+Enter same passphrase again:    #------ Enter or any passphrase then Enter ---------
+Your identification has been saved in /c/Users/Administrator/.ssh/id_rsa
+Your public key has been saved in /c/Users/Administrator/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:uxPLLMMspo5kn8Hcz/ENCF21D1sFEdftf4XyQAJrDpM Administrator@SESEPBD2
+The key's randomart image is:
++---[RSA 3072]----+
+|     .hh + * o   |
+|    . ..+=-o.    |
+|   E o ..g +   + |
+|    =   ..oo..   |
+|     . .Ro .     |
+|  o .   +..      |
+| o ++.=  + +   + |
+|o.. = F C.o      |
+|..o= . =.o .     |
++----[SHA256]-----+
+====================================================
+
+
+# Go to this directory
+---------- Command ----------
+cd c:/Users/Administrator/.ssh   (cd and pasted link which NOTED)
+
+
+
+# Adding your SSH key to the ssh-agent
+	# Start the ssh-agent in the background.
+------------- command ------------------------------------------------------------------
+eval $(ssh-agent -s)
+----------------------------------------------------------------------------------------
+
+=========== Result EXAMPLE ===========
+Agent pid 157952
+======================================
+
+
+	# Add your SSH private key to the ssh-agent
+----------------------------------------------------------------------------------------
+ssh-add ~/.ssh/id_rsa
+----------------------------------------------------------------------------------------
+
+=========== Result EXAMPLE ===========
+Enter passphrase for /c/Users/Administrator/.ssh/id_rsa:    # ------ Enter or passphrase then Enter--------
+Identity added: /c/Users/Administrator/.ssh/id_rsa (Administrator@SESHOPBD)
+======================================
+
+
+
+
+## Now need to copy .ssh key from device
+----------------- Copy Command ---------------------------------------------------
+clip < ~/.ssh/id_rsa.pub
+----------------------------------------------------------------------------------
+
+========== No Output ============
+## Go to github or .ssh option and paste your copied ssh key.
+
+
+@asifulmamun
+## Source: Github - Doc
