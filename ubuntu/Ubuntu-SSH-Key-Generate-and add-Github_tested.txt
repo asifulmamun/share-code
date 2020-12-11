@@ -21,7 +21,7 @@ ssh-keygen
 
 =========== Result EXAMPLE ===========================
 enerating public/private rsa key pair.
-Enter file in which to save the key (/home/asifulmamun/.ssh/id_rsa):	#---- Enter -------
+Enter file in which to save the key (/home/asifulmamun/.ssh/id_rsa):	#---- Enter (you can give rsa name) -------
 Enter passphrase (empty for no passphrase):	#------ Enter or any passphrase then Enter ---------
 Enter same passphrase again:	#------ Enter or any passphrase then Enter ---------
 Your identification has been saved in /home/asifulmamun/.ssh/id_rsa
@@ -57,7 +57,7 @@ Agent pid 157952
 ======================================
 
 
-	# Add your SSH private key to the ssh-agent
+	# Add your SSH private key to the ssh-agent (id_rsa replace with your own rsa if you given before when created ssh-keygen)
 ----------------------------------------------------------------------------------------
 ssh-add ~/.ssh/id_rsa
 ----------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ Identity added: /home/asifulmamun/.ssh/id_rsa (asifulmamun@asifulmamun-ubuntu)
 
 ## Now need to copy .ssh key from device
 # before need installed 'apt-get install xclip' - if 'xclip' installed try to below process or installation command is 'sudo apt-get install xclip' after install then follow below process.
-
+(id_rsa replace with your own ****.pub if you given before when created ssh-keygen)
 ----------------- Copy Command ---------------------------------------------------
 xclip -selection clipboard < ~/.ssh/id_rsa.pub
 ----------------------------------------------------------------------------------
