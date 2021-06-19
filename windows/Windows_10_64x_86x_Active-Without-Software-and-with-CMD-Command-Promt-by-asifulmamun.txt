@@ -44,3 +44,17 @@ slmgr /skms kms8.msguides.com
 slmgr /ato
 
 #Image Example Link: https://www.facebook.com/pg/asifulmamunPage/photos/?tab=album&album_id=1755456821274541
+
+
+
+
+===============================
+	Seconde Way
+================================
+Download the cmd file and open with Administrator
+	# or
+Step 1: Copy the code/text from the link to a new text document.
+Step 2: Paste the code into the text file. Then save it as a batch file (named “1click.cmd”).
+Step 3: Run the batch file as administrator.
+
+Downlodad Lnik: https://github.com/asifulmamun/share-code/blob/master/Windows_10_64x_86x_Active-Without-Software-and-with-CMD-Command-Promt-by-asifulmamun.cmd
