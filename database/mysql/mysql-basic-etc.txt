@@ -1,3 +1,6 @@
+// Go to DB - Ubuntu
+sudo mysql -u root -p
+
 ---------------------------
     # Some User Function
 ----------------------------
