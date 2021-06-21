@@ -1,44 +1,40 @@
+=== DB Access
 // Go to DB - Ubuntu
 sudo mysql -u root -p
 
----------------------------
-    # Some User Function
-----------------------------
-===================
+
+
+=== User Function
 // Create USER
 CREATE USER 'asifulmamun'@'localhost' IDENTIFIED BY '1998';
 
-// Permission to all DB and Tables this user
+// Delete User
+DROP USER 'username'@'localhost';
+
+
+
+=== Permission
 // GRANT Type_of_Permissoin_(Example: CREATE, UPDATE, SELECT/ALL etc) ON DB_Name.Table_Name TO 'username'@'DB_Host';
 GRANT ALL PRIVILEGES ON * . * TO 'asifulmamun'@'localhost';
 
 // Flush User for give Permission
 FLUSH PRIVILEGES;
-===================
 
-
-====================
 // View Current Permission of Any User
 SHOW GRANTS FOR 'username'@'localhost';
-===================
 
-
-===================
 // Remove Permission
-// REVOKE type_of_permission_(Example: CREATE, UPDATE, SELECT/ALL etc) ON database_name.table_name FROM 'username'@'DB_Host';
-REVOKE ALL PRIVILEGES ON * . * TO 'asifulmamun'@'localhost';
-
-// Delete User
-DROP USER 'username'@'localhost';
-====================
+# REVOKE type_of_permission_(Example: CREATE, UPDATE, SELECT/ALL etc) ON database_name.table_name FROM 'username'@'DB_Host';
+REVOKE ALL PRIVILEGES ON * . * FROM 'asifulmamun'@'localhost';
 
 
-====================
+
+=== Query
 // Show Databases
 SHOW DATABASES;
 
 // Select any DB
-// USE my_db;
+# USE my_db;
 USE DB_Name;
 
 // Show Tables all of selected DB
