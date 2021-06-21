@@ -29,6 +29,20 @@ REVOKE ALL PRIVILEGES ON * . * FROM 'asifulmamun'@'localhost';
 
 
 
+=== Create/Delete
+// Create DB with utf8 collation
+# CREATE DATABASE db_name CHARACTER SET charset_name COLLATE collation_name;
+CREATE DATABASE wp CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+// Create DB only
+# CREATE DATABASE db_name;
+CREATE DATABASE wp;
+
+// Delete/Drop DB
+DROP DATABASE db_name;
+
+
+
 === Query
 // Show Databases
 SHOW DATABASES;
