@@ -54,3 +54,9 @@ USE DB_Name;
 
 // Show tables - Selected DB
 SHOW TABLES;
+
+// Show Tables Column - Slected DB
+#describe users;
+describe Table_Name;
+
+-- all query for same as mysql query
