@@ -1,0 +1,18 @@
+Step
+----
+Generate a ssh key
+Copy the public key from ssh
+This local ssh key after copy go to cloude VMs and add this public key to google cloude platform (GCP)
+
+Go to ubuntu terminal and enter below command to access:
+    ~ssh -i id_rsa asifulmamun@34.130.90.170
+    # Here (asifulmamun@34.130.90.170) asifulmamun is ssh key username, which collected from public ssh key example:
+    
+    Example: (First go to ssh folder)
+    -------
+        ~cat id_rsa.pub
+    
+    Result:
+    ------
+        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCkGc0M2h4n7mi7jUzCEvXSpUnQkPZyJUJ+WOvplpHBYSlZ6DwYrl8j5RSwGvPbOZoxB8QSDOIDX+BhTindT/9SZH0LVZB9TXgwV1408m87AZ5p4Q4vVCoutHPjGbYbcGTgfTzNTF7vVqFU7ViFu5Z6Ply24kK14PK8Nc0ML62iE7U3ljUbMmrECEDthIF/2u6clwN/JlsOSLgxMQpmLNh2Pr9pOyuNeLc2ctKAVgSUJw5NQfOVOSRq5Shy2L2zYbT5e3zmTFZsQAzqxpe3o1TALqN0Y79dBu/rpWOp0M54CQgNNk85co6mMe0EO3RQ7Gp0VeSqvve3mvDxVx1XvZkuMhjC0XfEBcdVKv6BtjZTuo7DfdT0tCdu2soeXeV+GMySEsrJ0X5XxqkSJuYtFXiYg8BXE9nSMy1bFR4oc7Xszn2VvfTyfadqTdk98Bex/P3d39ieJjkrtGy76kfNJ7NWC60bXUrBrU8RUE05fpKzB2T2v6io/Nz4kSx0OAaCL68= asifulmamun@asifulmamun-ubuntu
+        # Here asifulmamun@asifulmamun-ubuntu (End of public key after '=' sign we found this), where asifulmamun (before '@' sign) is username used to connect goolge cloude platform (gcp) and another after '@' sign (asifulmamun-ubuntu) is not require for connect gcp. This is just ubuntu localhost.
