@@ -5,7 +5,7 @@ Copy the public key from ssh
 This local ssh key after copy go to cloude VMs and add this public key to google cloude platform (GCP)
 
 Go to ubuntu terminal and enter below command to access:
-    $ssh -i id_rsa asifulmamun@34.130.90.170
+    $ ssh -i id_rsa asifulmamun@34.130.90.170
 
     # 1) Here (asifulmamun@34.130.90.170), where asifulmamun is ssh key username, which collected from public ssh key example:
     
