@@ -1,0 +1,74 @@
+### Describe
+    $ ls -l
+
+    -rw-r--r-- 12 linuxize users 12.0K  Apr 8 20:51  filename.txt
+    |[-][-][-] -  [------] [---] [---]  [---------]  [-----------]
+    | |  |  |  |     |       |     |         |             |
+    | |  |  |  |     |       |     |         |             +------------> File Name or Folder Name
+    | |  |  |  |     |       |     |         +--------------------------> Date and Time When Create/Update
+    | |  |  |  |     |       |     +------------------------------------> File size
+    | |  |  |  |     |       +------------------------------------------> Group
+    | |  |  |  |     +--------------------------------------------------> Owner
+    | |  |  |  +--------------------------------------------------------> Number of links to the file
+    | |  |  +-----------------------------------------------------------> Other Permission (All user and groups)
+    | |  +--------------------------------------------------------------> Group Permission
+    | +-----------------------------------------------------------------> Owner Permission
+    +-------------------------------------------------------------------> File Type ('-' means file and 'd' means file/directory)
+
+    Where:
+        - : Means No Permission
+        r : Means No Read
+        w : Means No Write
+        x : Means No Execution
+
+### Command
+    $ sudo chown asifulmamun:asifulmamun filename.txt
+        or command
+    $ sudo chown asifulmamun: filename.txt
+        Where:
+            sudo - Command Permission as super user
+            chown - Command type for make owner of this file
+            asifulmamun:asifulmamun - First part is username and after ':' colon second part is group name
+            html - File or Folder name
+
+    $ sudo chown asifulmamun filename.txt
+        Where only change user as asifulmamun
+    
+    $ sudo chown :root filename.txt
+        Where only change group as root
+
+    $ sudo chmod -R 777 filename.txt
+        Where:
+        chmod - Permission type
+            -R - All file and folder and sub folder targated
+            777 - Set permission read, write and execution (rwx)
+            755 - Set permission read and execution only (r-x)
+
+    # Here we can use:
+        u = User
+        g = Group
+        o = Others
+        a = 'ugo' / all
+
+    $ sudo chmod u+x filename.txt
+        Where set execution permission to this file, can multiple (u+rwx), also single (u+r)
+
+    $ sudo chmod u-x filename.txt
+        Where remove execution permission to this file only user, can multiple (u-rwx), also single (u-r)
+    
+    $ sudo chmod g+x filename.txt
+        Where set execution permission to this file only group, can multiple (g+rwx), also single (g+r)
+
+    $ sudo chmod g-x filename.txt
+        Where remove execution permission to this file only from group, can multiple (g-rwx), also single (g-r)
+    
+    $ sudo chmod u-x *.txt
+        Where remove execution permission to this file only from user all txt files
+    
+    $ sudo chmod ug-r filename.txt
+        Where set execution permission to this file, can multiple (u+rwx), also single (u+r)
+
+    Where we can use:
+        - ugo+rwx / ugo-rwx / ug+rwx / ug-urx
+        - So any user, group or others can be possible remove or set any permission just need to mention (ugo or a for all or single, and permission any rwx / rw / r / x / w etc)
+

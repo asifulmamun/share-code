@@ -13,6 +13,6 @@ sudo composer --version
 
 # again close terminal and go to any folder or desktop for check globally work or not composer and agin give comman:
 
-sudo composer --version
+$ sudo composer --version
 
 -------------- I hope now ok...... :)
