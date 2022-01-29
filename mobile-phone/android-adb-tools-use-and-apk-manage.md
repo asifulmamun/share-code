@@ -82,6 +82,15 @@
     package:com.vanced.android.youtube
         - yout (replace with your text) Then find the package name
 
+    asifulmamun@asifulmamun-ubuntu:~$ adb shell
+    1811:/ $ pm uninstall com.android.notes 
+    Failure [DELETE_FAILED_INTERNAL_ERROR]
+        - Facing Problem some system app (didn't removed)
+
+    1811:/ $ pm uninstall --user 0 com.android.notes                               
+    Success
+        - Then try with this and removed (Solved)
+
 
 ### Uninstall
 
