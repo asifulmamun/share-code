@@ -7,14 +7,14 @@
 ### Start & Stop
   - just press this from your keyboart to start:
     
-    ctr+shift+R
+    ctr+altr+shift+R
     
     
   - It will stop after 30 second automatically.
   - If you want to stop mannually same procudure for this
   - Just press from keyboard:
     
-    ctr+shift+R
+    ctr+altr+shift+R
 
 
 ### Time Limit
