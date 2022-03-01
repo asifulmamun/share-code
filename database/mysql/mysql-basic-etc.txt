@@ -2,6 +2,16 @@
 // Go to DB - Ubuntu
 sudo mysql -u root -p
 
+// For Remote access
+mysql --host=35.184.239.145 --user=root --password=Password         - mysql --host=<ip or host> --user=root --password=password
+  OR
+mysql --host=35.184.239.145 --user=root --password                  - mysql --host=<ip or host> --user=root --password
+
+// For Remote access with database
+mysql --host=35.184.239.145 --user=root --password=Password wp          - mysql --host=<ip or host> --user=root --password=password <database name>
+  OR
+mysql --host=35.184.239.145 --user=root --password                      - mysql --host=<ip or host> --user=root --password <database name
+
 
 
 === User Function
