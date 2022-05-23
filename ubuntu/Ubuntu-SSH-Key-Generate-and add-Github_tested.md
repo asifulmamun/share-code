@@ -1,4 +1,6 @@
-# Checking Exist or Not SSH key before with below command.
+### Quick Method without Explain
+
+Check exist ssh keys are create but not added to ssh-agent (all of ssh keys which created)
 ------- Checking Command -----------------------------------------------------
 ls -al ~/.ssh
 -------------------------------------------------------------------------------
@@ -8,13 +10,13 @@ If .pub key file show after command like below example that means exist .ssh key
 id_rsa.pub
 id_ecdsa.pub
 id_ed25519.pub
-#--- or etc -----
+--- or etc -----
 =====================================
 
 
 
 
-# Generate New SSH
+Generate New SSH
 ----------- Generating Command ---------------------------------------------------
 ssh-keygen
 -----------------------------------------------------------------------------------
@@ -45,9 +47,7 @@ The key's randomart imagdge is:
 
 
 
-
-# Adding your SSH key to the ssh-agent
-	# Start the ssh-agent in the background.
+Adding your SSH key to the ssh-agent, Start the ssh-agent in the background.
 ------------- command ------------------------------------------------------------------
 eval "$(ssh-agent -s)"
 ----------------------------------------------------------------------------------------
@@ -57,7 +57,7 @@ Agent pid 157952
 ======================================
 
 
-	# Add your SSH private key to the ssh-agent (id_rsa replace with your own rsa if you given before when created ssh-keygen)
+Add your SSH private key to the ssh-agent (id_rsa replace with your own rsa if you given before when created ssh-keygen)
 ----------------------------------------------------------------------------------------
 ssh-add ~/.ssh/id_rsa
 ----------------------------------------------------------------------------------------
@@ -69,21 +69,25 @@ Identity added: /home/asifulmamun/.ssh/id_rsa (asifulmamun@asifulmamun-ubuntu)
 
 
 
+Check which or how many keys are added to ssh-agent or how many keys are exist or available to ssh-agent
+----------------------------------------------------------------------------------------
+ssh-add -l
+----------------------------------------------------------------------------------------
+=========== Result EXAMPLE ===========
+4096 SHA256:WTMrtqE2MF5FS2Ff/Y4BHcU0oTC5JlsvoSgP4YCqavQ My default ssh (RSA)
+======================================
 
-## Now need to copy .ssh key from device
-# before need installed 'apt-get install xclip' - if 'xclip' installed try to below process or installation command is 'sudo apt-get install xclip' after install then follow below process.
+
+
+Now need to copy .ssh key from device, Before need installed 'apt-get install xclip' - if 'xclip' installed try to below process or installation command is 'sudo apt-get install xclip' after install then follow below process.
 (id_rsa replace with your own ****.pub if you given before when created ssh-keygen)
 ----------------- Copy Command ---------------------------------------------------
 xclip -selection clipboard < ~/.ssh/id_rsa.pub
 ----------------------------------------------------------------------------------
 
 ========== No Output ============
-
-
-
-
-## Go to github or .ssh option and paste your copied ssh key.
+Go to github or .ssh option to any ssh-server where requre and paste your copied ssh key.
 
 
 @asifulmamun
-## Source: Github - Doc
+Source: Github - Doc
