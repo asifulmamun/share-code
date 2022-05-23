@@ -1,26 +1,49 @@
-### Quick Method without Explain
+### Proper Method - Also quick
+
+------- Check ssh are exist or not
+        ---- If exist check again for added to agent or not
+            --- If added to agent use it anywhere this key
+            --- Else need to add ssh to ssh-agent and then use anywhere
+        ---- Else Create ssh and process are below
+ls -al ~/.ssh
+
+------------ Create SSH
+asifulmamun@asifulmamun-ubuntu:~$ ssh-keygen -t rsa -b 4096 -f ~/.ssh/default -C "My default ssh"
+    ssh-keygen          // Tell to create ssh key
+    -t rsa              // Key encryption type is rsa
+    -b 4096             // SSH key size of bytes, there are 4kb or 4096 bytes of size ssh key
+    -C "My default ssh" // There -C is for comment and under Quote "" is comment, which is not important but it's comment for understand easily.
+
+----------- Agnet init
+asifulmamun@asifulmamun-ubuntu:~$ eval "$(ssh-agent -s)"
+
+
+----------- Added the ssh to agent
+asifulmamun@asifulmamun-ubuntu:~$ ssh-add ~/.ssh/default
+
+
+----------- Check which ssh keys are added/available to agent
+asifulmamun@asifulmamun-ubuntu:~$ ssh-add -l
+
+
+
+### Quick Method with explain
 
 Check exist ssh keys are create but not added to ssh-agent (all of ssh keys which created)
 ------- Checking Command -----------------------------------------------------
 ls -al ~/.ssh
--------------------------------------------------------------------------------
-
-If .pub key file show after command like below example that means exist .ssh key, now we can use exist .ssh key.
 =========== Result EXAMPLE ==========
 id_rsa.pub
 id_ecdsa.pub
 id_ed25519.pub
 --- or etc -----
-=====================================
-
+If .pub key file show after command like below example that means exist .ssh key, now we can use exist .ssh key.
 
 
 
 Generate New SSH
 ----------- Generating Command ---------------------------------------------------
 ssh-keygen
------------------------------------------------------------------------------------
-
 =========== Result EXAMPLE ===========================
 enerating public/private rsa key pair.
 Enter file in which to save the key (/home/asifulmamun/.ssh/id_rsa):	#---- Enter (you can give rsa name) -------
@@ -42,7 +65,6 @@ The key's randomart imagdge is:
 |=+=+o+.          |
 | .++=O=          |
 +----[SHA256]-----+
-====================================================
 
 
 
@@ -50,32 +72,24 @@ The key's randomart imagdge is:
 Adding your SSH key to the ssh-agent, Start the ssh-agent in the background.
 ------------- command ------------------------------------------------------------------
 eval "$(ssh-agent -s)"
-----------------------------------------------------------------------------------------
-
 =========== Result EXAMPLE ===========
 Agent pid 157952
-======================================
 
 
 Add your SSH private key to the ssh-agent (id_rsa replace with your own rsa if you given before when created ssh-keygen)
-----------------------------------------------------------------------------------------
+---------------------- SSH Key add to agent ------------------------------------------------------------------
 ssh-add ~/.ssh/id_rsa
-----------------------------------------------------------------------------------------
-
 =========== Result EXAMPLE ===========
 Enter passphrase for /home/asifulmamun/.ssh/id_rsa: 	# ------ Enter or passphrase then Enter--------
 Identity added: /home/asifulmamun/.ssh/id_rsa (asifulmamun@asifulmamun-ubuntu)
-======================================
 
 
 
 Check which or how many keys are added to ssh-agent or how many keys are exist or available to ssh-agent
-----------------------------------------------------------------------------------------
+--------------- ssh-keys check which are eixst to agent --------------------------------------------------------
 ssh-add -l
-----------------------------------------------------------------------------------------
 =========== Result EXAMPLE ===========
 4096 SHA256:WTMrtqE2MF5FS2Ff/Y4BHcU0oTC5JlsvoSgP4YCqavQ My default ssh (RSA)
-======================================
 
 
 
@@ -83,10 +97,9 @@ Now need to copy .ssh key from device, Before need installed 'apt-get install xc
 (id_rsa replace with your own ****.pub if you given before when created ssh-keygen)
 ----------------- Copy Command ---------------------------------------------------
 xclip -selection clipboard < ~/.ssh/id_rsa.pub
-----------------------------------------------------------------------------------
-
 ========== No Output ============
 Go to github or .ssh option to any ssh-server where requre and paste your copied ssh key.
+
 
 
 @asifulmamun
