@@ -7,7 +7,11 @@ del /s /f /q %temp%\*.*
 rd /s /q %temp%
 md %temp%
 del /s /f /q C:\Users\asifulmamun\Downloads\*.*
+rd /s /q C:\Users\asifulmamun\Downloads
+md C:\Users\asifulmamun\Downloads
 del /s /f /q C:\Users\asifulmamun\Documents\*.*
+rd /s /q C:\Users\asifulmamun\Documents
+md C:\Users\asifulmamun\Documents
 del /s /f /q C:\Users\asifulmamun\Desktop\*.jpg
 del /s /f /q C:\Users\asifulmamun\Desktop\*.png
 del /s /f /q C:\Users\asifulmamun\Desktop\*.pdf
