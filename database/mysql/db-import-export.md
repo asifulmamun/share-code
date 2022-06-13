@@ -1,4 +1,4 @@
-#### Crete Database
+#### Create Database
         asifulmamun@asifulmamun:~/Downloads$ mysql -u asifulmamun -p
         Enter password: 
         Welcome to the MySQL monitor.  Commands end with ; or \g.
