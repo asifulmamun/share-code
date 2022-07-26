@@ -1,3 +1,44 @@
+### Show all users in ubuntu
+    $ cut -d: -f1 /etc/passwd
+        or
+    $ compgen -u
+        or
+    $ getent passwd
+        // With details
+    
+
+### Show all Groups in ubuntu
+    $ compgen -g
+        or
+    $ getent group
+        // with details
+
+### Show User info - asifulmamun user replace with your username
+    $ getent passwd asifulmamun
+
+### Show group info user
+    $ grep -i --color 'asifulmamun' /etc/group
+        // asifulmamun change with username
+
+### Add under group any user
+    $ sudo usermod -aG www-data $USER
+        // www-data - group name, $USER - get automatic current user, also can use username like `$ sudo usermod -aG www-data asifulmamun`, here asifulmamun user adding under the www-data group
+        // Check - also you can check how many groups using the user asifulmamun with this comman `$ grep -i --color 'asifulmamun' /etc/group`
+
+    $ su $USER
+        // $USER change also with username like as `su asifulmamun`
+
+### Add user asifulmamun and group www-data - asifulmamun can access file like as owner also www-data because asifulmamun also www-data group member
+    $ sudo chown -R $USER:www-data
+        // $USER - also change with asifulmamun but need write permission to group
+        // Permission to grop `$ sudo chmod -R g+w html`
+
+
+
+
+
+
+
 ### Describe
     $ ls -l
 
@@ -71,4 +112,3 @@
     Where we can use:
         - ugo+rwx / ugo-rwx / ug+rwx / ug-urx
         - So any user, group or others can be possible remove or set any permission just need to mention (ugo or a for all or single, and permission any rwx / rw / r / x / w etc)
-
