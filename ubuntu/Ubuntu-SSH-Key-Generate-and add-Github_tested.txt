@@ -27,6 +27,15 @@ asifulmamun@asifulmamun-ubuntu:~$ ssh-add -l
 
 
 
+-------------- PUSHING TIME / MULTI PRIVATE KEY WORK MULTI ACCOUNT @github ------------------------
+---------------------------------------------------------------------------------------------------
+Creat New SSH> Add public key to another github or exist github> comman with private key like below
+        $ GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa' git push origin master
+id_rsa is private key which create by above method.
+---------------------------------------------------------------------------------------------------
+
+
+
 ### Quick Method with explain
 
 Check exist ssh keys are create but not added to ssh-agent (all of ssh keys which created)
@@ -100,6 +109,13 @@ xclip -selection clipboard < ~/.ssh/id_rsa.pub
 ========== No Output ============
 Go to github or .ssh option to any ssh-server where requre and paste your copied ssh key.
 
+
+-------------- PUSHING TIME / MULTI PRIVATE KEY WORK MULTI ACCOUNT @github ------------------------
+---------------------------------------------------------------------------------------------------
+Creat New SSH> Add public key to another github or exist github> comman with private key like below
+        $ GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa' git push origin master
+id_rsa is private key which create by above method.
+---------------------------------------------------------------------------------------------------
 
 
 @asifulmamun
