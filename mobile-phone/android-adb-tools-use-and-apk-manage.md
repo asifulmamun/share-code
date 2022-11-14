@@ -82,6 +82,13 @@
     package:com.vanced.android.youtube
         - yout (replace with your text) Then find the package name
 
+
+### Uninstall
+
+    1811:/ $ pm uninstall com.google.android.apps.cloudconsole
+    Success
+        - $ pm uninstall <package name of app>
+
     asifulmamun@asifulmamun-ubuntu:~$ adb shell
     1811:/ $ pm uninstall com.android.notes 
     Failure [DELETE_FAILED_INTERNAL_ERROR]
@@ -91,12 +98,6 @@
     Success
         - Then try with this and removed (Solved)
 
-
-### Uninstall
-
-    1811:/ $ pm uninstall com.google.android.apps.cloudconsole
-    Success
-        - $ pm uninstall <package name of app>
 
 
 ### Install
