@@ -21,6 +21,7 @@
         // asifulmamun change with username
 
 ### Add under group any user
+    $ sudo usermod -a -G www-data asifulmamun
     $ sudo usermod -aG www-data $USER
         // www-data - group name, $USER - get automatic current user, also can use username like `$ sudo usermod -aG www-data asifulmamun`, here asifulmamun user adding under the www-data group
         // Check - also you can check how many groups using the user asifulmamun with this comman `$ grep -i --color 'asifulmamun' /etc/group`
