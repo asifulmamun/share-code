@@ -1,5 +1,4 @@
 ### nginx install
-<<<<<<< HEAD
 sudo apt install nginx
 
 
