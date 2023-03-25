@@ -3,7 +3,6 @@ sudo apt install nginx
 
 
 ### nginx custom server
-<<<<<<< HEAD
 cd /etc/nginx/site-available
 
 sudo nano tws.conf
