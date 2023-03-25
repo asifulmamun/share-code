@@ -1,40 +1,58 @@
 ### nginx install
-sudo apt-add-repository ppa:ondrej/php
+
 
 
 ### nginx custom server
-server {
-	listen 80;
-	listen [::]:80;
-    server_name tws.test www.tws.test;
 
-	root /var/www/tws.test;
 
-	index index.php index.html index.htm index.nginx-debian.html;
+events {
+  worker_connections  4096;  ## Default: 1024
+}
 
-	server_name _;
+http{
+	server {
+		listen 80 default_server;
+		listen [::]:80 default_server;
 
-	location / {
-		autoindex on;
-		try_files $uri $uri/ =404;
-	}
+		root /var/www/html;
 
-	location ~ \.php$ {
+		# Add index.php to the list if you are using PHP
+		index index.html index.htm index.nginx-debian.html;
 
-		fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+		server_name _;
 
-	}
+		location / {
+			try_files $uri $uri/ =404;
+		}
 
-	location ~ /\.ht {
-		deny all;
+		# pass PHP scripts to FastCGI server
+		#
+		#location ~ \.php$ {
+		#	autoindex on;
+		#	include snippets/fastcgi-php.conf;
+		#
+		#	# With php-fpm (or other unix sockets):
+		#	fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+		#	# With php-cgi (or other tcp sockets):
+		#	fastcgi_pass 127.0.0.1:9000;
+		#}
+
+		# deny access to .htaccess files, if Apache's document root
+		# concurs with nginx's one
+		#
+		#location ~ /\.ht {
+		#	deny all;
+		#}
 	}
 }
 
 
 
-### php 7.4 install
-sudo apt install php7.4-fpm
 
+### php 7.4 install
+sudo apt-add-repository ppa:ondrej/php
+
+sudo apt install php7.4-fpm
 
 sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
 
