@@ -1,10 +1,14 @@
 ### nginx install
-
+<<<<<<< HEAD
+sudo apt install nginx
 
 
 ### nginx custom server
+<<<<<<< HEAD
+cd /etc/nginx/site-available
 
-
+sudo nano tws.conf
+<!-- put below code -->
 events {
   worker_connections  4096;  ## Default: 1024
 }
