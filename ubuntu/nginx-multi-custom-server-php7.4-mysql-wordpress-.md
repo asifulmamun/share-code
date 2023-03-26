@@ -7,8 +7,10 @@ sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl
 
 
 
+
 ### nginx install
 sudo apt install nginx
+
 
 
 ### nginx custom server
@@ -53,4 +55,4 @@ sudo systemctl reload nginx
 sudo systemctl restart nginx
 
 
-
+### 
