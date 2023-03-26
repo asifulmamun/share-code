@@ -62,9 +62,9 @@ sudo nano /etc/hosts
 ```
 
 ```
-127.0.0.1       localhost
-127.0.1.1       asifulmamun
-127.0.0.1       tws.test
+	127.0.0.1       localhost
+	127.0.1.1       asifulmamun
+	127.0.0.1       tws.test
 ```
 
 ### Server Reload and Restart
