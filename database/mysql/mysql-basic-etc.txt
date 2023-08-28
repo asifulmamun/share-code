@@ -2,6 +2,11 @@
 // Go to DB - Ubuntu
 sudo mysql -u root -p
 
+// Mysql root user password change (new_password as your password)
+USE mysql;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'new_password';
+FLUSH PRIVILEGES;
+
 // For Remote access
 mysql --host=35.184.239.145 --user=root --password=Password         - mysql --host=<ip or host> --user=root --password=password
   OR
