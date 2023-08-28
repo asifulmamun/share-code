@@ -12,6 +12,20 @@
         PasswordAuthentication yes           - After
 
 
+    Again
+        First go to with this command
+
+        asifulmamun@asifulmamun:~$ sudo nano /etc/ssh/sshd_config
+        [sudo] password for asifulmamun: 
+
+
+    Then chnage (replace no to yes):
+
+        PasswordAuthentication no            - Before
+        PasswordAuthentication yes           - After
+
+
+
 ### Restart SSHD
 
     asifulmamun@asifulmamun:~$ sudo service sshd restart
