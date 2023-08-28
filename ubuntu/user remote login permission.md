@@ -2,19 +2,6 @@
     
     First go to with this command
 
-        asifulmamun@asifulmamun:~$ sudo nano /etc/ssh/ssh_config
-        [sudo] password for asifulmamun: 
-
-
-    Then chnage (replace no to yes):
-
-        PasswordAuthentication no            - Before
-        PasswordAuthentication yes           - After
-
-
-    Again
-        First go to with this command
-
         asifulmamun@asifulmamun:~$ sudo nano /etc/ssh/sshd_config
         [sudo] password for asifulmamun: 
 
@@ -23,6 +10,19 @@
 
         PasswordAuthentication no            - Before
         PasswordAuthentication yes           - After
+
+            
+            @Trt if problem don't try------------------------------------
+                First go to with this command
+
+                asifulmamun@asifulmamun:~$ sudo nano /etc/ssh/ssh_config
+                [sudo] password for asifulmamun: 
+
+
+                Then chnage (replace no to yes):
+                PasswordAuthentication no            - Before
+                PasswordAuthentication yes           - After
+            @Trt if problem don't try------------------------------------
 
 
 
