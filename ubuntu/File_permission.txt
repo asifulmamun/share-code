@@ -1,3 +1,7 @@
+### Add user
+ $ sudo adduser asifulmamun
+
+
 ### Show all users in ubuntu
     $ cut -d: -f1 /etc/passwd
         or
