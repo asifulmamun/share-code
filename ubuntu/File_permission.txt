@@ -2,6 +2,15 @@
  $ sudo adduser asifulmamun
 
 
+### Give permission to user use sudo
+ $ sudo visudo
+ --------------Open edit file with nano also
+  This will open the sudoers file in a text editor. Look for a line that includes the phrase %sudo ALL=(ALL:ALL) ALL.
+  Add a new line below that line and enter: asifulmamun ALL=(ALL:ALL) ALL
+  Save the file and exit the text editor.
+
+
+
 ### Show all users in ubuntu
     $ cut -d: -f1 /etc/passwd
         or
@@ -20,9 +29,11 @@
 ### Show User info - asifulmamun user replace with your username
     $ getent passwd asifulmamun
 
+
 ### Show group info user
     $ grep -i --color 'asifulmamun' /etc/group
         // asifulmamun change with username
+
 
 ### Add under group any user
     $ sudo usermod -a -G www-data asifulmamun
