@@ -1,28 +1,27 @@
 ### WSL in PowerShell of Windows
-```
-wsl -l -v
-```
+    ```
+    wsl -l -v
+    ```
 
-Result: Here Ubuntu-22.04 is running and default, and other Ubuntu distro running but default is Ubuntu-22.04 we can change everythin default to secondary, no matter, but running means working.
-PS C:\Users\asifulmamun> wsl -l -v
-  NAME            STATE           VERSION
-* Ubuntu-22.04    Stopped         2
-  Ubuntu          Stopped         2
-```
+    Result: Here Ubuntu-22.04 is running and default, and other Ubuntu distro running but default is Ubuntu-22.04 we can change everythin default to secondary, no matter, but running means working.
+    PS C:\Users\asifulmamun> wsl -l -v
+    NAME            STATE           VERSION
+    * Ubuntu-22.04    Stopped         2
+    Ubuntu          Stopped         2
+    ```
 
 
-Update Distro
-```
-wsl --set-version <Distro> 2
-```
-Example: Name of Distro found from windows PowerShell this command: `wsl -l -v`, and found example Ubuntu-22.04
-```
-wsl --set-version Ubuntu-22.0.4 2
-```
+    Update Distro
+    ```
+    wsl --set-version <Distro> 2
+    ```
+    Example: Name of Distro found from windows PowerShell this command: `wsl -l -v`, and found example Ubuntu-22.04
+    ```
+    wsl --set-version Ubuntu-22.0.4 2
+    ```
+    After Update this this from older to version-2 then if not wokring the docker then try to below command and process.
 
-After Update this this from older to version-2 then if not wokring the docker then try to below command and process.
-
-### Solved with this
+### Solved docker/docker-compose problem with this
 It seems like there might be an issue with the Docker installation on your system. Let's try a different approach to install Docker.
 
 Please follow these steps:
