@@ -23,7 +23,7 @@ Access from other device with smb,
 \\your_ip_or_device_username\mamunserver-downloads
 ```
 
-Example:
+##### Example:
 ```
 [mamunserver-downloads]
         comment = This is just share of download folder
