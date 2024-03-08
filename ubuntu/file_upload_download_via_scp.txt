@@ -1,20 +1,14 @@
 ### Upload
-```
-$ scp -v index.html asifulmamun@34.130.90.170:/var/www/html
-    Where:
-        scp - command
-        -v - (if -r it will transfer folder and files all) example:
-            $ scp -r index.html asifulmamun@34.130.90.170:/var/www/html
-        index.html - file name/directory name or path (can use /home/asifulmamun/desktop/myfile.txt)
-        asifulmamun@34.130.90.170 - before colon ':', server destination
-        /var/www/html - after colon ':', destination of directory, where file upload
-```
+    $ scp -v index.html asifulmamun@34.130.90.170:/var/www/html
+        Where:
+            scp - command
+            -v - (if -r it will transfer folder and files all) example:
+                $ scp -r index.html asifulmamun@34.130.90.170:/var/www/html
+            index.html - file name/directory name or path (can use /home/asifulmamun/desktop/myfile.txt)
+            asifulmamun@34.130.90.170 - before colon ':', server destination
+            /var/www/html - after colon ':', destination of directory, where file upload
 
 
 
-### Download
-```
-scp ubuntu@pickshare.asifulmamun.info.bd:"/home/ubuntu/picksharedb.sql" /home/asifulmamun/
-```
-    "/home/ubuntu/picksharedb.sql" => Remote file, want to download
-    /home/asifulmamun/ => local folder/targated folder where want to download this
+
+

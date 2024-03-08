@@ -1,0 +1,51 @@
+{
+	"name": "tws-master-pro",
+	"version": "1.0.0",
+	"description": "This is wordpress theme, It is for Tawakkulshop.com but, anyone can use it by owner permission with purchase or owner gift. It was build in 2022.",
+	"main": "app.js",
+	"scripts": {
+		"build": "cross-env NODE_ENV=production webpack --mode production --progress",
+		"dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+		"clean": "rm -rf build/*"
+	},
+	"keywords": [
+		"woocommerce",
+		"wordpress",
+		"themes"
+	],
+	"author": "Al Mamun",
+	"license": "ISC",
+	"private": true,
+	"devDependencies": {
+		"@babel/core": "^7.20.12",
+		"@babel/preset-env": "^7.20.2",
+		"@babel/preset-react": "^7.18.6",
+		"autoprefixer": "^10.4.14",
+		"babel-loader": "^9.1.2",
+		"clean-webpack-plugin": "^4.0.0",
+		"cross-env": "^7.0.3",
+		"css-loader": "^6.7.3",
+		"cssnano": "^4.1.11",
+		"file-loader": "^6.2.0",
+		"mini-css-extract-plugin": "^2.7.2",
+		"node-sass": "^8.0.0",
+		"optimize-css-assets-webpack-plugin": "^6.0.1",
+		"postcss": "^8.4.21",
+		"postcss-loader": "^7.0.2",
+		"precss": "^4.0.0",
+		"sass-loader": "^13.2.0",
+		"sass-mq": "^6.0.0",
+		"style-loader": "^3.3.1",
+		"tailwind": "^4.0.0",
+		"tailwindcss": "^2.2.19",
+		"uglifyjs-webpack-plugin": "^2.2.0",
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.1"
+	},
+	"browserslist": [
+		"defaults"
+	],
+	"dependencies": {
+		"lodash": "^4.17.21"
+	}
+}

@@ -1,0 +1,18 @@
+@import './../css/tailwind.css';
+
+
+.app{
+    color: red;
+}
+
+.css-tailwind{
+    color: red;
+}
+
+.tailwind{
+    color: blue
+}
+
+body{
+    @apply bg-blue-500;
+}

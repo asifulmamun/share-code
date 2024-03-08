@@ -91,8 +91,5 @@
         +------------------+
         4 rows in set (0.00 sec)
 
-
-#### Export
-```
-mysqldump -u YourUser -p YourDatabaseName > export.sql
-```
+        mysql> exit;
+        Bye

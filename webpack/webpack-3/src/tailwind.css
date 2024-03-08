@@ -1,0 +1,21 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body{
+ 
+  
+    @apply bg-blue-500;
+    
+    }
+
+    h1{
+        @apply text-yellow-500;
+    }
+
+
+    .tailwind{
+        color: green;
+    }
