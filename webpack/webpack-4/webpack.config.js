@@ -2,12 +2,22 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const entry = {
+  app: './src/js/app.js',
+  // index: './src/js/index.js',
+}
+
+
 const config = {
-  entry: './src/index.js',
+
+  entry: entry,
+
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    // filename: 'app.js'
+    filename: 'js/[name].js'
   },
+
   module: {
     rules: [
       {
@@ -30,8 +40,8 @@ const config = {
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
-          'sass-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -40,12 +50,16 @@ const config = {
             },
           },
           'postcss-loader',
+          'sass-loader',
+
         ]
       }
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css'
+    })
   ]
 };
 
