@@ -16,17 +16,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_tailwind_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../css/tailwind.css */ \"./src/css/tailwind.css\");\n/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../sass/app.scss */ \"./src/sass/app.scss\");\n\n\n// import \"./../tailwind.css\";\n\n\n//# sourceURL=webpack://webpack/./src/js/app.js?");
-
-/***/ }),
-
-/***/ "./src/sass/app.scss":
-/*!***************************!*\
-  !*** ./src/sass/app.scss ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./src/sass/app.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_tailwind_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../css/tailwind.css */ \"./src/css/tailwind.css\");\n/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../sass/app.scss */ \"./src/sass/app.scss\");\n\n\n\n//# sourceURL=webpack://webpack/./src/js/app.js?");
 
 /***/ }),
 
@@ -37,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./src/css/tailwind.css?");
+
+/***/ }),
+
+/***/ "./src/sass/app.scss":
+/*!***************************!*\
+  !*** ./src/sass/app.scss ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./src/sass/app.scss?");
 
 /***/ })
 

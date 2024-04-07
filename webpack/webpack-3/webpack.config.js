@@ -41,9 +41,23 @@ const config = {
       {
         test: /\.scss$/,
         use: [
+
+          
+          'sass-loader',
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
+          
+          // 'css-loader',
+          
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          'postcss-loader',
+
+
+
         ]
       }
     ]

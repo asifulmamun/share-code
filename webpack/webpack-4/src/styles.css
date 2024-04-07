@@ -3,3 +3,9 @@
 @tailwind components;
 
 @tailwind utilities;
+
+/* 
+body{
+    @apply bg-indigo-500;
+
+} */

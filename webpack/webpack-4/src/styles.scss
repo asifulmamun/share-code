@@ -2,14 +2,4 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-$primary-color: white;
-$bg: black;
-h1 {
-  color: $primary-color;
-  background-color: $bg;
-}
 
-body{
-  // background-color: green;
-  // @apply bg-indigo-500;
-}

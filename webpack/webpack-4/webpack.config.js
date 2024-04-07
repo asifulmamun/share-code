@@ -25,12 +25,13 @@ const config = {
               importLoaders: 1
             }
           },
-          // 'postcss-loader'
+          'postcss-loader'
         ]
       },
       {
         test: /\.scss$/,
         use: [
+          'sass-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -39,7 +40,6 @@ const config = {
             },
           },
           'postcss-loader',
-          'sass-loader',
         ]
       }
     ]
