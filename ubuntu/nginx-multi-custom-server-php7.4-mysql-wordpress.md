@@ -19,6 +19,34 @@ cd /etc/nginx/site-available
 cp default tws.conf
 sudo nano tws.conf
 ```
+
+#### Use another php version php-fpm
+Go to php fpm installed folter and check the how many version are on there, ```/run/php```, lets we are installing the php8.2-fpm
+```
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php8.2-fpm
+```
+Then the nginx server edit
+- Go to nginx config file: cd nano /etc/nginx/sites-available/
+- Open the server config file which you want
+- Change the location phpx.x to required version which are available in /run/php folder like php7.4-fpm.sock to php8.2-fpm.sock
+```
+ server{
+	------ Others code -----
+	location ~ \.php$ {
+		autoindex on;
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+	}
+}
+```
+- Test nginx: ```sudo nginx -t```
+- Reload nginx: ```sudo systemctl reload nginx```
+- Test again nginx: ```sudo nginx -t```
+- Enable the fpm: ```sudo systemctl enable php8.2-fpm```
+- Restart the fpm: ```sudo systemctl restart php8.2-fpm``` or go to server reload or restart menu
+
 ### Usue this code
 ```
 server {
