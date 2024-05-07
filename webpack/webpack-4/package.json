@@ -10,8 +10,8 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "dev": "webpack --mode development --watch",
-    "prod": "npm run build-prod"
+    "dev": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "prod": "cross-env NODE_ENV=production npm run build-prod"
   },
   "dependencies": {
     "tailwindcss": "^3.4.1"
@@ -21,7 +21,9 @@
     "@babel/preset-env": "^7.24.0",
     "autoprefixer": "^10.4.18",
     "babel-loader": "^9.1.3",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.10.0",
+    "css-minimizer-webpack-plugin": "^6.0.0",
     "mini-css-extract-plugin": "^2.8.1",
     "node-sass": "^9.0.0",
     "postcss-loader": "^8.1.1",
