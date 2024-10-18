@@ -4,13 +4,16 @@
 
 $primary_color: orange;
 
-:root{
-    --primary_color: blue;
-}
+@import './../global/global.scss';
+
 
 
 body{
     @apply bg-red-500;
     // background-color: var(--primary_color);
     // background-color: $primary_color;
+}
+
+.my_class{
+    // @apply text-white;
 }
