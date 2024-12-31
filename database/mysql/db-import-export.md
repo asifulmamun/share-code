@@ -51,6 +51,9 @@
         mysql> exit
         Bye
 
+#### Export Database
+```mysqldump -u username -p database_name > /path/to/backup.sql```
+
 #### Import Data to existing DB with Direct password
     Below command `asifulmamun@asifulmamun:~/Downloads$ mysql -u asifulmamun -p1998 febbms < ahobanbl_febbms.sql`
     Here -p1998 means: -p means password and where password was 1998.
