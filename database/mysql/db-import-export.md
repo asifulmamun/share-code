@@ -75,6 +75,8 @@
 
         Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
+        ```Get-Content 'minmax-after corrections.sql' | mysql -u root -p minmax``` - with windows powershell import if error
+
 ##### Show Databases and tables is imported or not after import
         mysql> show databses;
         ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databses' at line 1
