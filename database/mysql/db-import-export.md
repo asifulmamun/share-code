@@ -75,7 +75,8 @@
 
         Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-        ```Get-Content 'minmax-after corrections.sql' | mysql -u root -p minmax``` - with windows powershell import if error
+        Get-Content 'minmax-after corrections.sql' | mysql -u root -p minmax 
+        - with windows powershell import if error
 
 ##### Show Databases and tables is imported or not after import
         mysql> show databses;
