@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  mysql:
+    container_name: lems-mysql
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: lems
+      MYSQL_USER: lems
+      MYSQL_PASSWORD: lems
+    volumes:
+      # - ./Docker/MySql/lems.cnf:/etc/mysql/conf.d/lems.cnf
+      - ./Docker/MySql/data:/var/lib/mysql
+    networks:
+      - lems-network
+    ports:
+      - "3306:3306"
+
+  php:
+    container_name: lems-php
+    build:
+      context: ./Docker/PHP
+      dockerfile: Dockerfile
+    working_dir: /var/www/html/lems
+    volumes:
+      - .:/var/www/html/lems
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: lems-mysql
+      DB_DATABASE: lems
+      DB_USERNAME: lems
+      DB_PASSWORD: lems
+    networks:
+      - lems-network
+    ports:
+      - "9000:9000"
+
+  nginx:
+    container_name: lems-nginx
+    build:
+      context: ./Docker/Nginx
+      dockerfile: Dockerfile
+    depends_on:
+      - php
+    volumes:
+      - ./:/var/www/html/lems
+      - ./Docker/Nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - lems-network
+    ports:
+      - "80:80"
+  
+  
+
+
+  phpmyadmin:
+    container_name: lems-phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: lems-mysql
+      PMA_PORT: 3306
+      PMA_USER: lems
+      PMA_PASSWORD: lems
+    networks:
+      - lems-network
+    ports:
+      - "8080:80"
+
+
+networks:
+  lems-network:
+    driver: bridge
